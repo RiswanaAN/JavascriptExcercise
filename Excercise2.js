@@ -2,10 +2,10 @@
     console.log("Loading User Details...");
 })();
 let greetingMessage= (fname, lname)=>{
-    let msg= greeting()+" " +fname +" " +lname;
-
+    let msg= greeting();
     function greeting(){
-        return "Good Morning";
+        return "Good Morning"+" " +fname +" " +lname;
+
     }
 
     return msg;
