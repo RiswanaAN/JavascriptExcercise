@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dates Exercise</title>
+        <script type="text/javascript" language="javascript">
+            function checkDate(){
+
+                //Today's date
+                let today= new Date();
+
+                //take input from user
+                let inDate= document.getElementById("inputDate").value;
+                let inD= new Date(inDate);
+                
+                //comparing dates
+                if(today.toDateString() == inD.toDateString()){
+                    alert("Today");
+                }
+                else if(today > inD){
+                    alert("Before Today");
+                }
+                else{
+                    alert("After Today");
+                }   
+                
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <label>Enter the Date</label>
+            <input type="date" id="inputDate" value="gg"></input>
+            <button onclick="checkDate()">Click</button>
+        </form>
+    </body>
+</html>
