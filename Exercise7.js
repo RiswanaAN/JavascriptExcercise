@@ -1,5 +1,5 @@
 
-var isChecked;
+var isChecked=true;
 function validate(config, segment){
     for(let key in config){
        if(config[key].type== "REQUIRED"){
@@ -17,14 +17,14 @@ function validate(config, segment){
 
 const GLConfig = {
     "CO" : { type: "REQUIRED"},
-    "MAJ": { type: "REQUIRED"},
+    "MAJ": { type: "NORMAL"},
     "SET": { type: "NORMAL"},
     "MIN": { type: "REQUIRED"}
-  }
+}
 const GLSegments = {
     "CO" : "10",
     "MAJ": "111",
-    "SET": "11111",
+    "SET": "111",
     "MIN": "000"
 }
 
