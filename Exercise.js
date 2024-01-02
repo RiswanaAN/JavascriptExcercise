@@ -1,18 +1,23 @@
+
 let array = ['apple','banana','mango']
-for(let i=0; i<array.length; i++){
-    console.log(array[i]);
-}
 
-console.log("Next Iteration")
+console.log("1st loop using ForEach");
+array.forEach((fruits)=>{
+    console.log(fruits)
+});
+
+
+console.log("Next Iteration using map looping")
 let arrayObject = [{fruit:'apple'},{fruit:'banana'},{fruit:'mango'}]
-for(let i=0; i< arrayObject.length; i++){
-    let obj= arrayObject[i];
+let newArray= arrayObject.map((obj)=>{
     for(const x in obj){
-         console.log(obj[x])
+        return obj[x]
     }
-}
+});
 
-console.log("Next Iteration")
+console.log(newArray.join(" \n"));
+
+console.log("Next Iteration using for-in")
 let object = { fruit1:'apple',fruit2:'banana',fruit3:'mango'}
 for(const fruit in object){
     console.log(object[fruit]);
